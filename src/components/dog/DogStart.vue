@@ -4,42 +4,15 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam velit vitae neque pariatur ducimus tenetur eius non excepturi, numquam aliquam quo distinctio impedit, nostrum, natus cumque laborum ipsam? Corrupti, labore!</p>
         <div v-if="showModal">
             <transition name="modal">
-            <!-- <div class="modal-mask">
-                <div class="modal-wrapper">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" @click="showModal=false">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title">Modal title</h4>
-                    </div>
-                    <div class="modal-body">
-                        modal body
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div> -->
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">Modal Heading</h4>
-                            <button type="button" class="close" data-dismiss="modal" @click="showModal=false">&times;</button>
+                <div class="modal-mask">
+                    <div class="modal-wrapper">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="spinner-border text-warning " role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
                         </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            Modal body..
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" @click="showModal=false">Close</button>
-                        </div>
-
                     </div>
                 </div>
             </transition>
@@ -73,5 +46,12 @@ export default {
     .modal-wrapper {
         display: table-cell;
         vertical-align: middle;
+    }
+
+    .modal-content {
+        border: none;
+        background-color: transparent;
+        left: 50%;
+        right: 50%;
     }
 </style>
